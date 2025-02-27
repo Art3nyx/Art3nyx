@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contacto</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="portfolio.html">Portafolio</a></li>
+            <li><a href="education.html">Educación</a></li>
+            <li><a href="experience.html">Experiencia</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Formulario de contacto -->
+        <section class="contact-form">
+            <h2>Envíame un Mensaje</h2>
+            <div class="bloque">
+                <form action="#" method="post">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Redes sociales y correo -->
+        <section class="social-links">
+            <h2>Mis Redes Sociales y Correo</h2>
+            <div class="bloque">
+                <ul>
+                    <li><a href="https://www.instagram.com/mj_phnx?igsh=MWF0c2dpbjcwYm80ag==
+"_blank">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/in/michellemj14/" target="_blank">LinkedIn</a></li>
+                    <li>
+                        <strong>Correo Electrónico:</strong>
+                        <a href="mailto:mramirez14@uabc.edu.mx">mramirez14@uabc.edu.mx</a>
+                        <span id="copiar-correo" style="cursor: pointer; color: #FF6B6B; font-size: 0.9rem;">
+                            (Copiar)
+                        </span>
+                        <span id="mensaje-copiado" style="display: none; color: #4ECDC4; font-size: 0.9rem;">
+                            ¡Correo copiado!
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Michelle Jazmine Ramirez Abarca. Todos los derechos reservados.</p>
+    </footer>
+ <!-- Script para copiar el correo -->
+    <script>
+        document.getElementById('copiar-correo').addEventListener('click', function() {
+            // Copia el correo al portapapeles
+            navigator.clipboard.writeText('mramirez14@uabc.edu.mx')
+                .then(() => {
+                    // Muestra el mensaje de confirmación
+                    document.getElementById('mensaje-copiado').style.display = 'inline';
+                    setTimeout(() => {
+                        document.getElementById('mensaje-copiado').style.display = 'none';
+                    }, 2000); // Oculta el mensaje después de 2 segundos
+                })
+                .catch(() => {
+                    alert('No se pudo copiar el correo. Por favor, cópialo manualmente.');
+                });
+        });
+    </script>
+</body>
+</html>

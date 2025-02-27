@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotografía</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fotografía</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li>
+                <a href="portfolio.html">Portafolio</a>
+                <ul>
+                    <li><a href="photography.html">Fotografía</a></li>
+                    <li><a href="ceramics.html">Cerámica</a></li>
+                    <li><a href="sculpture.html">Escultura</a></li>
+                </ul>
+            </li>
+            <li><a href="education.html">Educación</a></li>
+            <li><a href="experience.html">Experiencia</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="photography-details">
+            <h2>Mi Trabajo en Fotografía</h2>
+            <div class="bloque">
+                <!-- Carrusel de imágenes -->
+                <div class="carrusel">
+                    <img src="assets/images/fotografia1.jpg" alt="Fotografía 1" class="active">
+                    <img src="assets/images/fotografia2.jpg" alt="Fotografía 2">
+                    <img src="assets/images/fotografia3.jpg" alt="Fotografía 3">
+                    <img src="assets/images/fotografia4.jpg" alt="Fotografía 4">
+                    <img src="assets/images/fotografia5.jpg" alt="Fotografía 5">
+                    <img src="assets/images/fotografia6.jpg" alt="Fotografía 6">
+                    <img src="assets/images/fotografia7.jpg" alt="Fotografía 7">
+                    <img src="assets/images/fotografia8.jpg" alt="Fotografía 8">
+                    <img src="assets/images/fotografia9.jpg" alt="Fotografía 9">
+                    <img src="assets/images/fotografia10.jpg" alt="Fotografía 10">
+                </div>
+                <div class="carrusel-botones">
+                    <button onclick="anterior()">Anterior</button>
+                    <button onclick="siguiente()">Siguiente</button>
+                </div>
+                <p>
+                    La fotografía es mi pasión. A través de mi lente, capturo momentos únicos, emociones y paisajes que cuentan historias.
+                    Explora mi colección de fotografías, donde cada imagen tiene un significado especial.
+                </p>
+                <a href="portfolio.html" class="boton">Volver al Portafolio</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Michelle Jazmine Ramirez Abarca. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para el carrusel -->
+    <script>
+        let imagenes = document.querySelectorAll('.carrusel img');
+        let indice = 0;
+
+        function mostrarImagen(n) {
+            // Oculta todas las imágenes
+            imagenes.forEach(img => img.classList.remove('active'));
+            // Muestra la imagen actual
+            imagenes[n].classList.add('active');
+        }
+
+        function siguiente() {
+            indice = (indice + 1) % imagenes.length;
+            mostrarImagen(indice);
+        }
+
+        function anterior() {
+            indice = (indice - 1 + imagenes.length) % imagenes.length;
+            mostrarImagen(indice);
+        }
+
+        // Cambia la imagen automáticamente cada 5 segundos
+        setInterval(siguiente, 5000);
+    </script>
+</body>
+</html>
