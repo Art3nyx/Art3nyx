@@ -6,6 +6,80 @@
     <title>Cerámica</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        /* Estilos para el carrusel */
+        .carrusel {
+            width: 100%;
+            max-width: 600px; /* Ancho máximo del carrusel */
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .carrusel img {
+            width: 100%;
+            height: auto; /* Mantiene la proporción de la imagen */
+            display: none;
+            border-radius: 8px;
+        }
+
+        .carrusel img.active {
+            display: block;
+        }
+
+        .carrusel-botones {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .carrusel-botones button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            background-color: #FF6B6B;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .carrusel-botones button:hover {
+            background-color: #FF4C4C;
+        }
+
+        /* Estilos para los videos */
+        .videos {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .videos video {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilos para la galería adicional */
+        .galeria-adicional {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .galeria-adicional img {
+            max-width: 100%; /* Ajusta el ancho máximo al contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -31,53 +105,91 @@
     </nav>
 
     <main>
-        <section class="ceramics-details">
+        <!-- Bloque 1: Introducción a la cerámica -->
+        <section class="bloque">
             <h2>Mi Trabajo en Cerámica</h2>
-            <div class="bloque">
-                <!-- Carrusel de imágenes -->
-                <div class="carrusel">
-                    <img src="assets/images/ceramica1.jpg" alt="Cerámica 1" class="active">
-                    <img src="assets/images/ceramica2.jpg" alt="Cerámica 2">
-                    <img src="assets/images/ceramica3.jpg" alt="Cerámica 3">
-                    <img src="assets/images/ceramica4.jpg" alt="Cerámica 4">
-                    <img src="assets/images/ceramica5.jpg" alt="Cerámica 5">
-                    <img src="assets/images/ceramica6.jpg" alt="Cerámica 6">
-                    <img src="assets/images/ceramica7.jpg" alt="Cerámica 7">
-                    <img src="assets/images/ceramica8.jpg" alt="Cerámica 8">
-                    <img src="assets/images/ceramica9.jpg" alt="Cerámica 9">
-                    <img src="assets/images/ceramica10.jpg" alt="Cerámica 10">
-                </div>
-                <div class="carrusel-botones">
-                    <button onclick="anterior()">Anterior</button>
-                    <button onclick="siguiente()">Siguiente</button>
-                </div>
-                <p>
-                    La cerámica es una de mis grandes pasiones. Creo piezas únicas utilizando técnicas tradicionales y modernas.
-                    Cada obra es una expresión de mi creatividad y dedicación.
-                </p>
-                <a href="portfolio.html" class="boton">Volver al Portafolio</a>
+            <div class="carrusel">
+                <img src="assets/images/ceramica1.jpg" alt="Cerámica 1" class="active">
+                <img src="assets/images/ceramica2.jpg" alt="Cerámica 2">
+                <img src="assets/images/ceramica3.jpg" alt="Cerámica 3">
+                <img src="assets/images/ceramica4.jpg" alt="Cerámica 4">
+                <img src="assets/images/ceramica5.jpg" alt="Cerámica 5">
+                <img src="assets/images/ceramica6.jpg" alt="Cerámica 6">
             </div>
-              <!-- Videos -->
-                <h3>Videos de Cerámica</h3>
-                <div class="videos">
-                    <video controls width="400">
-                        <source src="../assets/videos/ceramica1.mp4" type="video/mp4">
-                        Tu navegador no soporta el elemento de video.
-                    </video>
-                    <video controls width="400">
-                        <source src="../assets/videos/ceramica2.mp4" type="video/mp4">
-                        Tu navegador no soporta el elemento de video.
-                    </video>
-                </div>    
-             <!-- Enlace al PDF -->
-                <h3>Documentación</h3>
-                <p>
-                    Descarga este PDF para conocer más sobre mi proceso de creación en cerámica.
-                </p>
-                <a href="../assets/documents/ceramica.pdf" download="Ceramica.pdf" class="boton">
-                    Descargar PDF sobre Cerámica
-                </a>
+            <div class="carrusel-botones">
+                <button onclick="anterior()">Anterior</button>
+                <button onclick="siguiente()">Siguiente</button>
             </div>
+            <p>
+                La cerámica es una de mis grandes pasiones. Creo piezas únicas utilizando técnicas tradicionales y modernas.
+                Cada obra es una expresión de mi creatividad y dedicación.
+            </p>
+            <a href="portfolio.html" class="boton">Volver al Portafolio</a>
+        </section>
+
+        <!-- Bloque 2: Técnicas de cerámica -->
+        <section class="bloque">
+            <h2>Técnicas Utilizadas</h2>
+            <p>
+                En mi trabajo con cerámica, utilizo diversas técnicas para dar forma y vida a mis piezas:
+            </p>
+            <ul>
+                <li><strong>Modelado a mano:</strong> Creo formas únicas utilizando solo mis manos y herramientas básicas.</li>
+                <li><strong>Torno de alfarero:</strong> Para piezas simétricas y delicadas.</li>
+                <li><strong>Esmaltado:</strong> Aplico esmaltes para dar color y textura a las piezas.</li>
+            </ul>
+        </section>
+
+        <!-- Bloque 3: Materiales -->
+        <section class="bloque">
+            <h2>Materiales</h2>
+            <p>
+                Trabajo con una variedad de materiales para crear mis piezas de cerámica:
+            </p>
+            <ul>
+                <li><strong>Arcilla:</strong> De diferentes tipos</li>
+                <li><strong>Esmaltes:</strong> Para dar acabados únicos y coloridos.</li>
+                <li><strong>Óxidos y pigmentos:</strong> Para decorar y añadir detalles especiales.</li>
+            </ul>
+        </section>
+
+        <!-- Bloque 4: Videos -->
+        <section class="bloque">
+            <h2>Videos de Cerámica</h2>
+            <div class="videos">
+                <video controls width="400">
+                    <source src="assets/videos/ceramica1.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <video controls width="400">
+                    <source src="assets/videos/ceramica2.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+        </section>
+
+        <!-- Bloque 5: Documentación -->
+        <section class="bloque">
+            <h2>Documentación</h2>
+            <p>
+                Descarga este PDF para conocer más sobre mi proceso de creación en cerámica.
+            </p>
+            <a href="assets/documents/ceramica.pdf" download="Ceramica.pdf" class="boton">
+                Descargar PDF sobre Cerámica
+            </a>
+        </section>
+
+        <!-- Bloque 6: Galería adicional -->
+        <section class="bloque">
+            <h2>Galería Adicional</h2>
+            <div class="galeria-adicional">
+                <img src="assets/images/ceramica7.jpg" alt="Cerámica 7">
+                <img src="assets/images/ceramica8.jpg" alt="Cerámica 8">
+                <img src="assets/images/ceramica9.jpg" alt="Cerámica 9">
+            </div>
+            <p>
+                Explora más de mi trabajo en esta galería adicional, donde cada pieza tiene una historia que contar.
+            </p>
         </section>
     </main>
 
