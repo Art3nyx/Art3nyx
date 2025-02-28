@@ -6,6 +6,65 @@
     <title>Escultura</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        /* Estilos para el carrusel */
+        .carrusel {
+            width: 100%;
+            max-width: 600px; /* Ancho máximo del carrusel */
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .carrusel img {
+            width: 100%;
+            height: auto; /* Mantiene la proporción de la imagen */
+            display: none;
+            border-radius: 8px;
+        }
+
+        .carrusel img.active {
+            display: block;
+        }
+
+        .carrusel-botones {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .carrusel-botones button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            background-color: #FF6B6B;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .carrusel-botones button:hover {
+            background-color: #FF4C4C;
+        }
+
+        /* Estilos para la galería adicional */
+        .galeria-adicional {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .galeria-adicional img {
+            max-width: 100%; /* Ajusta el ancho máximo al contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -31,26 +90,90 @@
     </nav>
 
     <main>
-        <section class="sculpture-details">
+        <!-- Bloque 1: Introducción a la escultura -->
+        <section class="bloque">
             <h2>Mi Trabajo en Escultura</h2>
-            <div class="bloque">
-                <!-- Carrusel de imágenes -->
-                <div class="carrusel">
-                    <img src="assets/images/escultura1.jpg" alt="Escultura 1" class="active">
-                    <img src="assets/images/escultura2.jpg" alt="Escultura 2">
-                    <img src="assets/images/escultura3.jpg" alt="Escultura 3">
-                    <img src="assets/images/escultura4.jpg" alt="Escultura 4">
-                    <img src="assets/images/escultura5.jpg" alt="Escultura 5">
-                 
-                </div>
-                <div class="carrusel-botones">
-                    <button onclick="anterior()">Anterior</button>
-                    <button onclick="siguiente()">Siguiente</button>
-                </div>
-                <p>
-                    La escultura me permite dar vida a mis ideas a través de diferentes materiales. Cada pieza es un reflejo de mi visión artística y mi dedicación al detalle.
-                </p>
-                <a href="portfolio.html" class="boton">Volver al Portafolio</a>
+            <div class="carrusel">
+                <img src="assets/images/escultura1.jpg" alt="Escultura 1" class="active">
+                <img src="assets/images/escultura2.jpg" alt="Escultura 2">
+                <img src="assets/images/escultura3.jpg" alt="Escultura 3">
+                <img src="assets/images/escultura4.jpg" alt="Escultura 4">
+                <img src="assets/images/escultura5.jpg" alt="Escultura 5">
+            </div>
+            <div class="carrusel-botones">
+                <button onclick="anterior()">Anterior</button>
+                <button onclick="siguiente()">Siguiente</button>
+            </div>
+            <p>
+                La escultura me permite dar vida a mis ideas a través de diferentes materiales. Cada pieza es un reflejo de mi visión artística y mi dedicación al detalle.
+            </p>
+            <a href="portfolio.html" class="boton">Volver al Portafolio</a>
+        </section>
+
+        <!-- Bloque 2: Técnicas de escultura -->
+        <section class="bloque">
+            <h2>Técnicas Utilizadas</h2>
+            <p>
+                En mi trabajo con escultura, utilizo diversas técnicas para dar forma y vida a mis piezas:
+            </p>
+            <ul>
+                <li><strong>Tallado:</strong> Utilizo herramientas especializadas para esculpir materiales como madera y piedra.</li>
+                <li><strong>Modelado:</strong> Trabajo con arcilla y otros materiales moldeables para crear formas únicas.</li>
+                <li><strong>Ensamblaje:</strong> Combino diferentes materiales para crear piezas complejas y dinámicas.</li>
+            </ul>
+        </section>
+
+        <!-- Bloque 3: Materiales -->
+        <section class="bloque">
+            <h2>Materiales</h2>
+            <p>
+                Trabajo con una variedad de materiales para crear mis esculturas:
+            </p>
+            <ul>
+                <li><strong>Madera:</strong> Para piezas talladas con detalles intrincados.</li>
+                <li><strong>Arcilla:</strong> Para modelar formas orgánicas y expresivas.</li>
+                <li><strong>Metal:</strong> Para estructuras resistentes y modernas.</li>
+            </ul>
+        </section>
+
+        <!-- Bloque 4: Herramientas -->
+        <section class="bloque">
+            <h2>Herramientas que Uso</h2>
+            <p>
+                Utilizo una amplia variedad de herramientas para dar forma y textura a mis esculturas, desde herramientas profesionales hasta objetos cotidianos:
+            </p>
+            <ul>
+                <li><strong>Herramientas Craftsmart:</strong> Para detalles precisos y acabados finos.</li>
+                <li><strong>Espátulas y cuchillos de modelado:</strong> Para dar forma a la arcilla y otros materiales.</li>
+                <li><strong>Objetos cotidianos:</strong> Como cepillos, peines o incluso juguetes, para crear texturas únicas.</li>
+            </ul>
+        </section>
+
+        <!-- Bloque 5: Inspiración -->
+        <section class="bloque">
+            <h2>Inspiración</h2>
+            <p>
+                Mi trabajo está fuertemente influenciado por los monstruos y criaturas del cine de terror, especialmente los de directores como:
+            </p>
+            <ul>
+                <li><strong>Guillermo del Toro:</strong> Por su capacidad para crear criaturas que combinan belleza y terror.</li>
+                <li><strong>Tim Burton:</strong> Por su estilo gótico y sus personajes llenos de personalidad.</li>
+            </ul>
+            <p>
+                Estas influencias me inspiran a crear esculturas que cuenten historias y evoquen emociones intensas.
+            </p>
+        </section>
+
+        <!-- Bloque 6: Pasión por contar historias -->
+        <section class="bloque">
+            <h2>Pasíon por Contar Historias</h2>
+            <p>
+                Para mí, la escultura no es solo crear formas, sino contar historias. Cada pieza que hago tiene un mensaje, una emoción o una narrativa que quiero transmitir. Ya sea a través de una criatura fantástica o una figura abstracta, busco que mis esculturas hablen por sí mismas y conecten con quienes las observan.
+            </p>
+            <div class="galeria-adicional">
+                <img src="assets/images/escultura6.jpg" alt="Escultura 6">
+                <img src="assets/images/escultura7.jpg" alt="Escultura 7">
+                <img src="assets/images/escultura8.jpg" alt="Escultura 8">
             </div>
         </section>
     </main>
