@@ -6,6 +6,64 @@
     <title>Fotografía</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        /* Estilos para la galería adicional */
+        .galeria-adicional {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .galeria-adicional img {
+            max-width: 100%; /* Ajusta el ancho máximo al contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilos para el carrusel */
+        .carrusel {
+            width: 100%;
+            max-width: 600px; /* Ancho máximo del carrusel */
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .carrusel img {
+            width: 100%;
+            height: auto; /* Mantiene la proporción de la imagen */
+            display: none;
+            border-radius: 8px;
+        }
+
+        .carrusel img.active {
+            display: block;
+        }
+
+        .carrusel-botones {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .carrusel-botones button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            background-color: #FF6B6B;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .carrusel-botones button:hover {
+            background-color: #FF4C4C;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -77,7 +135,8 @@
             </p>
             <ul>
                 <li><strong>Cámara digital:</strong> Canon EOS.</li>
-                <li><strong>Lentes:</strong> 50mm f/1.8, 24  ,,  f/2.8, y 70-200mm f/2.8.</li>
+                <li><strong>Lentes:</strong> 50mm f/1.8, 24 f/2.8, y 70-200mm f/2.8.</li>
+              
             </ul>
         </section>
 
@@ -108,20 +167,6 @@
                 <li><strong>"Luces Nocturnas":</strong> Fotografías de larga exposición en entornos urbanos.</li>
             </ul>
         </section>
-
-     <!-- Bloque 5: Proyectos destacados -->
-        <section class="bloque">
-            <h2>Proyectos Destacados</h2>
-            <p>
-                Algunos de mis proyectos más significativos incluyen:
-            </p>
-            <ul>
-                <li><strong>"Rostros de la Ciudad":</strong> Una serie de retratos que capturan la diversidad cultural de mi ciudad.</li>
-                <li><strong>"Naturaleza Viva":</strong> Un proyecto dedicado a la conservación de paisajes naturales.</li>
-                <li><strong>"Luces Nocturnas":</strong> Fotografías de larga exposición en entornos urbanos.</li>
-            </ul>
-        </section>
-
 
         <!-- Bloque 6: Galería adicional -->
         <section class="bloque">
